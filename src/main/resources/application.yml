@@ -16,6 +16,12 @@ spring:
         - Path=/api/auth/**
         filters:
         - AuthenticationFilter
+      - id: agentserver
+        uri: lb://AGENTSERVER
+        predicates:
+        - Path=/api/agent/**
+        filters:
+        - AuthenticationFilter
   application:
     name: gateway_server
 
