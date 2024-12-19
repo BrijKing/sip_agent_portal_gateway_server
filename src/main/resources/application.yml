@@ -29,6 +29,13 @@ spring:
         - Path=/api/feed/**
         filters:
         - AuthenticationFilter
+
+      globalcors:
+        cors-configurations:
+         "[/**]":
+            allowedOrigins: "*"
+            allowedMethods: "*"
+            allowedHeaders: "Content-Type,Authorization"
   application:
     name: gateway_server
 
